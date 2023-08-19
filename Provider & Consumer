@@ -1,0 +1,13 @@
+1] Command to Run the Kafa Topic Producer Console in Unix
+./kafka-console-producer.sh --broker-list localhost:9092 --topic kafkaTopicC
+
+2] Command to Run the Kafa Topic Consumer Console in Unix
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TopicName> --from-beginning
+
+3] Passing Key Value pair for Producer and Consumer
+
+/Producer
+./kafka-console-producer.sh --topic <TopicName> --bootstrap-server localhost:9092 --property parse.key=true --property key.separator="*"
+
+/Consumer
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TopicName> --from-beginning --property print.key=true --property key.separator="*"
