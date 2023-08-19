@@ -1,0 +1,10 @@
+/* Commmands To Create Kafka Topics */
+
+1] Basic
+./kafka-topics.sh --create --bootstrap-server localhost:9092 --topic <TopicName>
+
+2] Using Partitions
+./kafka-topics.sh --create --bootstrap-server localhost:9092 --topic <TopicName> --partitions <Number>
+
+3] Adding Replication Factor
+./kafka-topics.sh --create --bootstrap-server localhost:9092 --topic <TopicName> --partitions <Number> --replication-factor <Number>
